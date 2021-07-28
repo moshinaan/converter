@@ -1,4 +1,4 @@
-require_relative 'application.rb'
+require_relative 'application'
 
 options = Listener.listen(ARGV)
 
@@ -15,4 +15,3 @@ end
 
 converter = Converter.find(options[:format])
 converter.convert(feeds)
-

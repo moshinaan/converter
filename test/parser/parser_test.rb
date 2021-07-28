@@ -1,4 +1,4 @@
-require_relative "../test_helper.rb"
+require_relative '../test_helper'
 
 class TestParser < Minitest::Test
   def test_rss_parser
@@ -9,7 +9,7 @@ class TestParser < Minitest::Test
     feeds =  parser.parse(data)
 
     assert RssParser.can_parse?(data) == true
-    assert feeds.class == Array
+    assert feeds.instance_of?(Array)
     assert feeds.count == 200
   end
 
@@ -21,7 +21,7 @@ class TestParser < Minitest::Test
     feeds =  parser.parse(data)
 
     assert AtomParser.can_parse?(data) == true
-    assert feeds.class == Array
+    assert feeds.instance_of?(Array)
     assert feeds.count == 3
   end
 
@@ -33,7 +33,7 @@ class TestParser < Minitest::Test
     feeds = parser.parse(data)
 
     assert JsonParser.can_parse?(data) == true
-    assert feeds.class == Array
+    assert feeds.instance_of?(Array)
     assert feeds.count == 2
   end
 end

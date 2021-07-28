@@ -1,4 +1,4 @@
-require_relative "../test_helper.rb"
+require_relative '../test_helper'
 
 class TestParser < Minitest::Test
   def test_rss_parser
@@ -15,7 +15,7 @@ class TestParser < Minitest::Test
     assert RssConverter.can_convert?(output_format) == true
 
     output_data = File.read('./tmp/rss.txt')
-    assert  Nokogiri::XML(output_data).root&.name == 'rss'
+    assert Nokogiri::XML(output_data).root&.name == 'rss'
   end
 
   def test_atom_parser
@@ -32,7 +32,7 @@ class TestParser < Minitest::Test
     assert AtomConverter.can_convert?(output_format) == true
 
     output_data = File.read('./tmp/atom.txt')
-    assert  Nokogiri::XML(output_data).root&.name == 'feed'
+    assert Nokogiri::XML(output_data).root&.name == 'feed'
   end
 
   def test_json_parser
@@ -49,6 +49,6 @@ class TestParser < Minitest::Test
     assert JsonConverter.can_convert?(output_format) == true
 
     output_data = File.read('./tmp/json.txt')
-    assert JSON.parse(output_data).class == Hash
+    assert JSON.parse(output_data).instance_of?(Hash)
   end
 end

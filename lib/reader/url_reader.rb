@@ -3,7 +3,7 @@ require 'net/http'
 class UrlReader < BaseReader
   def self.can_read?(uri)
     url = URI.parse(uri)
-    url.kind_of?(URI::HTTP) || url.kind_of?(URI::HTTPS)
+    url.is_a?(URI::HTTP) || url.is_a?(URI::HTTPS)
   end
 
   def read(uri)

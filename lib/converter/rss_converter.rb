@@ -6,7 +6,7 @@ class RssConverter < BaseConverter
   end
 
   def convert(feeds)
-    File.open("./tmp/rss.txt", "w") { |f| f.write rss_builder(build_feeds(feeds))}
+    File.open('./tmp/rss.txt', 'w') { |f| f.write rss_builder(build_feeds(feeds)) }
   end
 
   private
@@ -14,16 +14,16 @@ class RssConverter < BaseConverter
   def build_feeds(feeds)
     result = []
 
-    guid = "default_id"
-    author = "default_author"
-    title = "default_title"
-    link = "default_link"
-    description = "default_description"
-    pubDate  = "default_pubDate"
-    enclosure_url = "default_enclosure url"
-    enclosure_type = "default_enclosure url"
-    enclosure_length = "default length"
-    category = "default_category"
+    guid = 'default_id'
+    author = 'default_author'
+    title = 'default_title'
+    link = 'default_link'
+    description = 'default_description'
+    pubDate = 'default_pubDate'
+    enclosure_url = 'default_enclosure url'
+    enclosure_type = 'default_enclosure url'
+    enclosure_length = 'default length'
+    category = 'default_category'
 
     feeds.each do |item|
       rss_item = {}
@@ -47,12 +47,11 @@ class RssConverter < BaseConverter
   end
 
   def rss_builder(feeds)
-    rss_feeds = RSS::Maker.make("2.0") do |maker|
-
-      maker.channel.language = "ru"
-      maker.channel.title = "Example Feed"
-      maker.channel.description = "Example description"
-      maker.channel.link = "https://www.ruby-lang.org/en/feeds/news.rss"
+    RSS::Maker.make('2.0') do |maker|
+      maker.channel.language = 'ru'
+      maker.channel.title = 'Example Feed'
+      maker.channel.description = 'Example description'
+      maker.channel.link = 'https://www.ruby-lang.org/en/feeds/news.rss'
 
       feeds.each do |feed|
         maker.items.new_item do |item|
@@ -68,7 +67,5 @@ class RssConverter < BaseConverter
         end
       end
     end
-
-    rss_feeds
   end
 end

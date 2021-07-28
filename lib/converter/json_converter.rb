@@ -6,7 +6,7 @@ class JsonConverter < BaseConverter
   end
 
   def convert(feeds)
-    File.open("./tmp/json.txt", "w") { |f| f.write json_builder(build_feeds(feeds))}
+    File.open('./tmp/json.txt', 'w') { |f| f.write json_builder(build_feeds(feeds)) }
   end
 
   private
@@ -14,11 +14,11 @@ class JsonConverter < BaseConverter
   def build_feeds(feeds)
     result = []
 
-    id = "default_id"
-    title = "default_title"
-    url = "default_link"
-    content_html = "default_description"
-    date_published  = "default_date_published"
+    id = 'default_id'
+    title = 'default_title'
+    url = 'default_link'
+    content_html = 'default_description'
+    date_published = 'default_date_published'
 
     feeds.each do |item|
       rss_item = {}
@@ -39,11 +39,11 @@ class JsonConverter < BaseConverter
     json_feeds = {}
     json_feeds[:items] = []
 
-    json_feeds[:version] = "https://jsonfeed.org/version/1"
-    json_feeds[:title] = "JSON Feed"
-    json_feeds[:icon] =  "https://micro.blog/jsonfeed/avatar.jpg"
-    json_feeds[:home_page_url] = "https://www.jsonfeed.org/"
-    json_feeds[:feed_url] = "https://www.jsonfeed.org/feed.json"
+    json_feeds[:version] = 'https://jsonfeed.org/version/1'
+    json_feeds[:title] = 'JSON Feed'
+    json_feeds[:icon] =  'https://micro.blog/jsonfeed/avatar.jpg'
+    json_feeds[:home_page_url] = 'https://www.jsonfeed.org/'
+    json_feeds[:feed_url] = 'https://www.jsonfeed.org/feed.json'
     json_feeds[:items] = feeds
 
     json_feeds.to_json

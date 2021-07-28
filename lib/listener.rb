@@ -14,7 +14,7 @@ class Listener
       opts.on('-s', '--sort SORTING', 'Sort feeds by times. asc or desc') do |sorting|
         options[:sort] = sorting
       end
-      opts.on('-h', '--help', 'Show help message') do ||
+      opts.on('-h', '--help', 'Show help message') do
         puts opts
       end
     end

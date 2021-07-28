@@ -1,4 +1,4 @@
-require_relative "../test_helper.rb"
+require_relative '../test_helper'
 
 class TestReader < Minitest::Test
   def test_file_reader

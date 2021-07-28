@@ -1,9 +1,9 @@
-require "minitest/autorun"
+require 'minitest/autorun'
 require 'json'
 
 require 'byebug'
 
-require_relative '../lib/application.rb'
+require_relative '../lib/application'
 # require_relative '../lib/reader/file_reader.rb'
 # require_relative '../lib/reader/url_reader.rb'
 # require_relative '../lib/parser/base_parser.rb'
