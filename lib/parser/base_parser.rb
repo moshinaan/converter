@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BaseParser
   def self.can_parse?
     raise NotImplementedError, 'did not define #can_parse?'

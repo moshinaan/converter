@@ -1,5 +1,7 @@
 require 'rss'
 
+# frozen_string_literal: true
+
 class AtomConverter < BaseConverter
   def self.can_convert?(output_format)
     output_format == 'atom'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AscSorting < BaseSorting
   def self.can_sort?(sort)
     sort.upcase == 'ASC'
