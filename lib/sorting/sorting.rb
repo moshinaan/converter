@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Sorting
+module Sorting
   def self.find(date)
     [AscSorting, DescSorting].find { |sorter| sorter.can_sort?(date) }
   end
