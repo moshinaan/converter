@@ -15,3 +15,5 @@
 
 # Ignore uploaded files in development.
 .byebug_history
+.DS_Store
+.idea/
