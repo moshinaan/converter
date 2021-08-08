@@ -1,0 +1,74 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    OptionParser (0.5.1)
+    activesupport (6.1.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    ast (2.4.2)
+    byebug (9.1.0)
+    concurrent-ruby (1.1.9)
+    i18n (1.8.10)
+      concurrent-ruby (~> 1.0)
+    io-wait (0.1.0)
+    json (2.5.1)
+    mini_portile2 (2.5.3)
+    minitest (5.14.4)
+    net-http (0.1.1)
+      net-protocol
+      uri
+    net-protocol (0.1.1)
+      io-wait
+      timeout
+    nokogiri (1.11.7)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    parallel (1.20.1)
+    parser (3.0.2.0)
+      ast (~> 2.4.1)
+    racc (1.5.2)
+    rainbow (3.0.0)
+    regexp_parser (2.1.1)
+    require_all (3.0.0)
+    rexml (3.2.5)
+    rss (0.2.9)
+      rexml
+    rubocop (1.18.4)
+      parallel (~> 1.10)
+      parser (>= 3.0.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml
+      rubocop-ast (>= 1.8.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.8.0)
+      parser (>= 3.0.1.1)
+    ruby-progressbar (1.11.0)
+    timeout (0.1.1)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    unicode-display_width (2.0.0)
+    uri (0.10.1)
+    zeitwerk (2.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  OptionParser
+  activesupport
+  byebug (~> 9.0, >= 9.0.6)
+  json
+  minitest
+  net-http
+  nokogiri
+  require_all
+  rss
+  rubocop
+
+BUNDLED WITH
+   2.1.4
