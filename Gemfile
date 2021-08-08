@@ -6,6 +6,7 @@ gem 'net-http'
 gem 'nokogiri'
 gem 'OptionParser'
 gem 'rss'
+gem 'require_all'
 
 gem 'byebug', '~> 9.0', '>= 9.0.6'
 gem 'minitest'
