@@ -14,7 +14,7 @@ class TestParser < Minitest::Test
     converter = RssConverter.new
     converter.convert(feeds)
 
-    assert RssConverter.can_convert?(output_format) == true
+    assert RssConverter.can_convert?(output_format)
 
     output_data = File.read('./tmp/rss.txt')
     assert Nokogiri::XML(output_data).root&.name == 'rss'
@@ -31,7 +31,7 @@ class TestParser < Minitest::Test
     converter = AtomConverter.new
     converter.convert(feeds)
 
-    assert AtomConverter.can_convert?(output_format) == true
+    assert AtomConverter.can_convert?(output_format)
 
     output_data = File.read('./tmp/atom.txt')
     assert Nokogiri::XML(output_data).root&.name == 'feed'
@@ -48,7 +48,7 @@ class TestParser < Minitest::Test
     converter = JsonConverter.new
     converter.convert(feeds)
 
-    assert JsonConverter.can_convert?(output_format) == true
+    assert JsonConverter.can_convert?(output_format)
 
     output_data = File.read('./tmp/json.txt')
     assert JSON.parse(output_data).instance_of?(Hash)

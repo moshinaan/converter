@@ -10,7 +10,7 @@ class TestParser < Minitest::Test
     parser = RssParser.new
     feeds =  parser.parse(data)
 
-    assert RssParser.can_parse?(data) == true
+    assert RssParser.can_parse?(data)
     assert feeds.instance_of?(Array)
     assert feeds.count == 200
   end
